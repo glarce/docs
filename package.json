@@ -2,10 +2,9 @@
   "name": "docs",
   "version": "1.0.0",
   "description": "The documentation for Glarce",
-  "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
