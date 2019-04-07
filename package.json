@@ -1,0 +1,28 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "The documentation for Glarce",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glarce/Docs.git"
+  },
+  "keywords": [
+    "Docs",
+    "Glarce",
+    "AR"
+  ],
+  "author": "trickypr",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/glarce/Docs/issues"
+  },
+  "homepage": "https://github.com/glarce/Docs#readme",
+  "dependencies": {
+    "vuepress": "^0.14.10"
+  }
+}
