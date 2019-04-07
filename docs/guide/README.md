@@ -36,16 +36,56 @@ The following is a template that you will need to fill out to get video basics w
 app.get(id, (res, req) => {
   res.type('video')
 
-  res.loadVids(['videoWebM', ''])
+  res.loadVids(['videoWebM', 'videoMP4'])
 
   res.send()
 })
 ```
 #### id
-The barcode id
+The barcode id. Generate the barcode using [this tool](http://au.gmented.com/app/marker/marker.php).
 
 #### type
 The media type, for videos it has to be `video`.
 
 #### loadVids
 Loads the vids, must be an array. The path is from the inside of the media folder, like `video/video1.mp4` We strongly recommend having both `webm` and `mp4` formats for cross browser compatibility.
+
+
+### A-Frame
+Before you start writing raw a-frame code, you should probably learn how to use a-frame. The only thing that Glarce does is that it helps to handle marker ids and keeping your code more organised.
+
+```js
+app.get(id, (res, req) => {
+  res.type('aframe')
+
+  res.js(() => {
+    console.log('Hello world')
+  })
+  res.assets('<!-- Assets here -->')
+  res.aframe('<a-box position="0 0 0" rotation="0 0 0" color="#4CC3D9"></a-box>')
+
+  res.send()
+})
+```
+
+#### id
+The barcode id. Generate the barcode using [this tool](http://au.gmented.com/app/marker/marker.php).
+
+#### type
+The media type, for videos it has to be `aframe`.
+
+#### js / javascript
+Loads javascript into the page.
+
+#### assets
+Loads HTML into the `a-assets` tag.
+
+#### aframe
+Loads HTML into the appropriate tag for the id.
+
+### Final line
+```js
+app.start()
+```
+
+This line starts the app. Any code after this line will be ignored.
