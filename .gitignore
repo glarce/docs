@@ -1,5 +1,6 @@
 # Vuepress
 docs/.vuepress/dist
+.ds_store
 
 # Logs
 logs

@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/docs/',
+  base: '/Docs/',
   themeConfig:
   {
     nav: [
