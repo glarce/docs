@@ -1,8 +1,17 @@
 module.exports = {
   base: '/Docs/',
   title: 'Glarce',
+  description: 'Web AR; simplified',
   themeConfig:
   {
+    serviceWorker:
+    {
+      updatePopup: true
+    },
+    sidebar: [
+      '/guide/',
+      '/API/'
+    ],
     nav: [
     {
       text: 'Home',
@@ -11,6 +20,10 @@ module.exports = {
     {
       text: 'Guide',
       link: '/guide/'
+    },
+    {
+      text: 'API',
+      link: '/API/'
     }],
 
     repo: 'glarce/Glarce',
@@ -22,4 +35,13 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help us improve this page!'
   }
+}
+
+function genSidebarConfig(title)
+{
+  return [
+  {
+    title,
+    collapsable: false
+  }]
 }

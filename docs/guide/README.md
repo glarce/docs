@@ -11,8 +11,8 @@ Go to the folder that you want to install it in and open terminal / cmd / powers
 
 ```bash
 npm init # Follow the instructions in the prompt to set up.
-npm i glarce/Glarce # Install Glarce
-cd node_modules/Glarce && npm i && cd ../.. # Install Glarce's dependancies
+npm install glarce/Glarce # Install Glarce
+cd node_modules/Glarce && npm install && cd ../.. # Install Glarce's dependancies
 ```
 ## Writing the app
 
@@ -25,7 +25,9 @@ const app = new Glarce() // Create a new app
 This creates the app and set it to the variable `app`. Next add:
 
 ```js
-app.set('server', {})
+app.set('server', {
+  secure: true
+})
 ```
 ### Video
 This creates a server that can be used as a production web server. Next create a folder named `media` and create another folder called `video` in it.
@@ -89,3 +91,50 @@ app.start()
 ```
 
 This line starts the app. Any code after this line will be ignored.
+
+### End result
+You should end up with a file that looks something like this.
+```js
+const Glarce = require('Glarce') // Import Glarce
+const app = new Glarce() // Create a new app
+
+app.set('server', {
+  secure: true
+})
+
+app.get(4, (res, req) => {
+  res.type('video')
+
+  res.loadVids(['videoWebM', 'videoMP4'])
+
+  res.send()
+})
+
+app.get(5, (res, req) => {
+  res.type('aframe')
+
+  res.js(() => {
+    console.log('Hello world')
+  })
+  res.assets('<!-- Assets here -->')
+  res.aframe('<a-box position="0 0 0" rotation="0 0 0" color="#4CC3D9"></a-box>')
+
+  res.send()
+})
+
+app.start()
+```
+
+## Starting
+### Dev
+:::danger
+DO NOT USE THE DEV SERVER IN PRODUCTION.
+The files in the dev server are not optimised and the certificate is not secure or added to a certificate authority
+:::
+If you just want to start a dev server to test stuff run:
+```bash
+node [insert file name here]
+```
+
+### Production
+Before you are putting this into production you are going to want to read our production guide (that I am yet to write).

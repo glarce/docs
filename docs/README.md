@@ -11,3 +11,6 @@ features:
   details: Glarce is open source and will always stay that way. You don't need to pay anyone to use it.
 footer: GPL-3.0 Licensed | Copyright © 2019 TrickyPR
 ---
+
+### Simple
+Build to make something as complex as AR in the browser, faster to code. 
