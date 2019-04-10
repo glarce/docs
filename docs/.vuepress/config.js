@@ -10,7 +10,8 @@ module.exports = {
     },
     sidebar: [
       '/guide/',
-      '/API/'
+      '/API/',
+      '/API/types.html'
     ],
     nav: [
     {
