@@ -17,7 +17,7 @@ npm install glarce/Glarce
 
 #### Import
 ```js
-const Glarce = require('Glarce')
+const Glarce = require('glarce')
 ```
 
 ### Instance

@@ -12,14 +12,14 @@ Go to the folder that you want to install it in and open terminal / cmd / powers
 ```bash
 npm init # Follow the instructions in the prompt to set up.
 npm install glarce/Glarce # Install Glarce
-cd node_modules/Glarce && npm install && cd ../.. # Install Glarce's dependancies
+cd node_modules/glarce && npm install && cd ../.. # Install Glarce's dependancies
 ```
 ## Writing the app
 
 First things first create a file called something like `app.js` (it has to have the `.js` extension). Add the following code to the to the top of the file:
 
 ```js
-const Glarce = require('Glarce') // Import Glarce
+const Glarce = require('glarce') // Import Glarce
 const app = new Glarce() // Create a new app
 ```
 This creates the app and set it to the variable `app`.
@@ -90,7 +90,7 @@ This line starts the app. Any code after this line will be ignored.
 ### End result
 You should end up with a file that looks something like this.
 ```js
-const Glarce = require('Glarce') // Import Glarce
+const Glarce = require('glarce') // Import Glarce
 const app = new Glarce() // Create a new app
 
 app.set('server', {
