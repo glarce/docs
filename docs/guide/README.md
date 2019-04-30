@@ -22,13 +22,8 @@ First things first create a file called something like `app.js` (it has to have 
 const Glarce = require('Glarce') // Import Glarce
 const app = new Glarce() // Create a new app
 ```
-This creates the app and set it to the variable `app`. Next add:
+This creates the app and set it to the variable `app`.
 
-```js
-app.set('server', {
-  secure: true
-})
-```
 ### Video
 This creates a server that can be used as a production web server. Next create a folder named `media` and create another folder called `video` in it.
 
