@@ -3,7 +3,7 @@
 The video types displays a plane with a video over the code that is scanned.
 
 ```js
-app.get(5, (res, req) => {
+app.get(5, res => {
   res.type('video')
 
   res.interactivity({
@@ -80,3 +80,38 @@ Ends the video at a certain point
 | Property        | Usage           |
 | ------------- | ------------- |
 | type      | What type of interactivity is used, must be `end` for ends |
+
+## Aframe
+Displays a custom aframe component. 
+
+```js
+app.get(4, res => {
+  res.type('aframe')
+
+  // JS that is run after the page has loaded
+  res.js(() => {
+    console.log('Hello world')
+  })
+
+  // The aframe html code
+  res.aframe(`
+    <a-box color="red" width="3"></a-box>
+  `)
+
+  // The assets html
+  res.assets(`
+    <img src="yourSrcHere" id="yourIdHere" />
+  `)
+
+  res.send()
+})
+```
+
+### `js` or `javascript`
+Loads any of the javascript that you pass into it on the barcode being mounted. Takes in a JavaScript function.
+
+### `aframe`
+This string is loaded in as html into the barcode. 
+
+### `assets`
+Loads the string of html into the `a-assets` tag. 
