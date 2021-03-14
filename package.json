@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/glarce/Docs#readme",
   "dependencies": {
-    "vuepress": "^0.14.10"
+    "vuepress": "^1.8.2"
   }
 }
